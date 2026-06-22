@@ -12,12 +12,12 @@ random_port=$((RANDOM % 40001 + 20000))
 
 
 echo "to /home/$username/domains/$domain/public_html/index.js"
-curl -s -o "/home/$username/domains/$domain/public_html/index.js" "https://raw.githubusercontent.com/TownMarshal/node-ws/main/index.js"
+curl -s -o "/home/$username/domains/$domain/public_html/index.js" "https://raw.githubusercontent.com/townzz/node-ws/main/index.js"
 if [ $? -ne 0 ]; then
     echo "Error: 下载脚本 index.js 失败！"
     exit 1
 fi
-curl -s -o "/home/$username/cron.sh" "https://raw.githubusercontent.com/TownMarshal/node-ws/main/cron.sh"
+curl -s -o "/home/$username/cron.sh" "https://raw.githubusercontent.com/townzz/node-ws/main/cron.sh"
 if [ $? -ne 0 ]; then
     echo "Error: 下载脚本 cron.sh 失败！"
     exit 1
@@ -69,7 +69,7 @@ cat > "/home/$username/domains/$domain/public_html/package.json" << EOF
   "description": "Node.js Server",
   "main": "index.js",
   "author": "eoovve",
-  "repository": "https://github.com/eoovve/node-ws",
+  "repository": "https://github.com/townzz/node-ws",
   "license": "MIT",
   "private": false,
   "scripts": {
